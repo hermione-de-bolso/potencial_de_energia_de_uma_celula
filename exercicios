@@ -1,0 +1,31 @@
+// Primeiro exercicio do canvas //
+
+#include <iostream>
+#include <cmath>  // Inclua <cmath> para utilizar a função log10
+
+using namespace std;
+
+int main()
+{
+    // Declaração de variáveis
+    double n, Q;
+
+    // Solicitar ao usuário os valores das seguintes variáveis
+    cout << "Entre com o valor do coeficiente da reação: ";
+    cin >> Q;
+
+    cout << "Digite o valor de elétrons fornecidos para a reação (em mols): ";
+    cin >> n;
+
+    // Cálculo do potencial de energia de uma célula eletrolítica
+    double Ec = 0.34 - (0.0592 / n) * log10(Q); // Usando log10 para base 10
+
+    // Exibir resultados
+    cout << fixed;
+    cout.precision(2);
+
+    cout << "\nResultado: " << endl;
+    cout << "Valor do potencial de energia de uma célula eletrolítica: " << Ec << " volts" << endl;
+
+    return 0;
+} 
