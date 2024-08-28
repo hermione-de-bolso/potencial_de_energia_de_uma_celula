@@ -1,0 +1,36 @@
+// Terceiro exercicio do canvas //
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // Declaração de variável
+    char turno;
+
+    // Solicitar ao usuário o turno em que estuda
+    cout << "Digite o turno em que você estuda (M para Matutino, V para Vespertino, N para Noturno): ";
+    cin >> turno;
+
+    // Exibir mensagem apropriada com base no turno
+    switch (turno) {
+        case 'M':
+        case 'm':
+            cout << "Bom dia!" << endl;
+            break;
+        case 'V':
+        case 'v':
+            cout << "Boa tarde!" << endl;
+            break;
+        case 'N':
+        case 'n':
+            cout << "Boa noite!" << endl;
+            break;
+        default:
+            cout << "Valor inválido!" << endl;
+            break;
+    }
+
+    return 0;
+} 
