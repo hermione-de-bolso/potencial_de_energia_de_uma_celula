@@ -1,0 +1,40 @@
+// Segundo exercicio do canvas //
+
+#include<iostream>
+#include<math.h>
+
+using namespace std;
+
+int main()
+{
+    //Declaração de variaveis
+    double N1, N2;
+
+    // Solicitar ao usuario os valores das seguintes variaveis
+    cout <<"Entre com o valor da primeira nota: ";
+    cin >> N1;
+
+    cout <<"Digite o valor da segunda nota: " ;
+    cin >> N2;
+
+    // Calculo da media das notas do aluno
+    double M=(N1 + N2)/2;
+
+    // Exibir resultados
+    cout <<fixed;
+    cout.precision(2);
+
+    cout <<"\nResultado: "<< endl;
+    cout<< "Valor da media das notas do aluno: " << M << "pontos" << endl;
+
+    //Determinar e exibir mensagem apropriada
+    if (M == 10) {
+        cout << "Aprovado com distinção" << endl;
+    } else if (M >= 6) {
+    cout << "Aprovado" << endl;
+    } else if (M < 6) {
+    cout << "Reprovado" << endl;
+    }
+
+    return 0;
+} 
