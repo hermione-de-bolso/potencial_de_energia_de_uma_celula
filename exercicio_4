@@ -1,0 +1,40 @@
+// Quarto exercicio do canvas //
+
+#include <iostream>
+#include <iomanip>
+#include <cmath>  // Inclua para usar a função pow
+
+using namespace std;
+
+int main()
+{
+    // Declaração de variáveis
+    float b, h, x0, y0, A, Ix, Iy, Ixy;
+
+    // Solicitar ao usuário os valores de base e altura do triângulo
+    cout << "\n\nDigite o valor da base do triângulo: ";
+    cin >> b;
+
+    cout << "\n\nDigite um valor para a altura do triângulo: ";
+    cin >> h;
+
+    // Cálculos pedidos
+    x0 = b / 3;
+    y0 = h / 3;
+    cout << fixed << setprecision(2);
+    cout << "\n\n(X0, Y0) = (" << x0 << ", " << y0 << ")";
+
+    A = (b * h) / 2;
+    cout << "\n\nÁrea = " << A;
+
+    Ix = b * pow(h, 3) / 36;
+    cout << "\n\nMomento de Inércia x = " << Ix;
+
+    Iy = h * pow(b, 3) / 36;
+    cout << "\n\nMomento de Inércia y = " << Iy;
+
+    Ixy = (-pow(b, 2) * pow(h, 2)) / 72;
+    cout << "\n\nMomento de Inércia xy = " << Ixy << endl;
+
+    return 0;
+}
